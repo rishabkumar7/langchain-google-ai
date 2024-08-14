@@ -6,6 +6,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def ask_stoic(query):
+    """
+    This function takes a query as input, invokes the language model with the query,
+    and returns the response from the language model.
+
+    Parameters:
+    query (str): The question to ask the language model.
+
+    Returns:
+    str: The response from the language model.
+    """
+
+    # Initialize the language model
     llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
 
 #   llm = Ollama(model="gemma")
